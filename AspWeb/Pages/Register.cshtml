@@ -1,0 +1,25 @@
+﻿@page "/register"
+@model AspWeb.Pages.RegisterModel
+@{
+	ViewData["Title"] = "Register";
+}
+
+@if (TempData["register_success"] != null)
+{
+    @if ((bool)TempData["register_success"] == false)
+    {
+        <div class="alert alert-warning">
+            @TempData["register_info"]
+        </div>
+    }
+}
+
+<div class="login-container">
+    <h2>Register Now</h2>
+    <form method="post">
+        <input asp-for="username" type="text" id="username_reg" placeholder="Username" autocomplete="username"><br>
+        <input asp-for="email" type="email" id="email_reg" placeholder="your@email.com" autocomplete="useremail"><br>
+        <input asp-for="password" type="password" id="password_reg" placeholder="Password" autocomplete="current-password"><br>
+        <button type="submit" style="margin-bottom: 10px;">Register</button>
+    </form>
+</div>

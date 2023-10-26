@@ -1,0 +1,164 @@
+﻿@page "/home"
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@if (TempData["message"]!=null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+
+<div id="carousel">
+    <div id="img_container">
+        <img src="assets/chill01.jpg" class="img">
+        <img src="assets/chill02.jpg" class="img">
+        <img src="assets/chill03.jpg" class="img">
+        <img src="assets/chill04.jpg" class="img">
+    </div>
+    <a onclick="click_prev()" id="prev">
+        <span class="arrow"><</span>
+    </a>
+    <a onclick="click_next()" id="next">
+        <span class="arrow">></span>
+    </a> 
+</div>
+
+<div class="w100" id="div_fav">
+    <div id="fav_header">
+        <h1 class="italic_header">LOCAL FAVOURITES</h1>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="grid-item-upper-div">
+                <a href="/detailpage01" class="grid-item-link">
+                    <h1 class="h1_item_head">弘扬爱国精神 致敬红色经典</h2>
+                </a>
+            </div>
+            <div>
+                <img src="assets/RedPhotos/Page1/hongimg04.jpeg" alt="students" class="grid-item-uppder-img">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-item-upper-div">
+                <a href="" class="grid-item-link">
+                    <h1 class="h1_item_head">SomeThing</h2>
+                </a>
+            </div>
+            <div>
+                <img src="assets/mocha.jpg" alt="Mocha" class="grid-item-uppder-img">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-item-upper-div">
+                <a href="" class="grid-item-link">
+                    <h1 class="h1_item_head">SomeThing</h2>
+                </a>
+            </div>
+            <div>
+                <img src="assets/mocha.jpg" alt="Mocha" class="grid-item-uppder-img">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-item-upper-div">
+                <a href="" class="grid-item-link">
+                    <h1 class="h1_item_head">SomeThing</h2>
+                </a>
+            </div>
+            <div>
+                <img src="assets/mocha.jpg" alt="Mocha" class="grid-item-uppder-img">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-item-upper-div">
+                <a href="" class="grid-item-link">
+                    <h1 class="h1_item_head">SomeThing</h2>
+                </a>
+            </div>
+            <div>
+                <img src="assets/mocha.jpg" alt="Mocha" class="grid-item-uppder-img">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-item-upper-div">
+                <a href="" class="grid-item-link">
+                    <h1 class="h1_item_head">SomeThing</h2>
+                </a>
+            </div>
+            <div>
+                <img src="assets/mocha.jpg" alt="Mocha" class="grid-item-uppder-img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="div_divider"></div>
+
+<div id="div_barista">
+    <div id="barista_row">
+        <div class="barista_profile">
+            <div class="div_upperprofile">
+                <div class="div_upperimagecontainer">
+                    <img src="assets/barista01.jpg" class="barista_img">
+                </div>
+
+                <div class="div_uppertextcontainer">
+                    <h2>Jeff</h2>
+                </div>
+            </div>
+            <div>
+                <p class="p_brista">Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista.</p>
+            </div>
+        </div>
+        <div class="div_divider_vert"></div>
+        <div class="barista_profile">
+            <div class="div_upperprofile">
+                <div class="div_upperimagecontainer">
+                    <img src="assets/barista01.jpg" class="barista_img">
+                </div>
+
+                <div class="div_uppertextcontainer">
+                    <h2>Jeff</h2>
+                </div>
+            </div>
+            <div>
+                <p class="p_brista">Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="barista_row">
+        <div class="barista_profile">
+            <div class="div_upperprofile">
+                <div class="div_upperimagecontainer">
+                    <img src="assets/barista01.jpg" class="barista_img">
+                </div>
+
+                <div class="div_uppertextcontainer">
+                    <h2>Jeff</h2>
+                </div>
+            </div>
+            <div>
+                <p class="p_brista">Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista.</p>
+            </div>
+        </div>
+        <div class="div_divider_vert"></div>
+        <div class="barista_profile">
+            <div class="div_upperprofile">
+                <div class="div_upperimagecontainer">
+                    <img src="assets/barista01.jpg" class="barista_img">
+                </div>
+
+                <div class="div_uppertextcontainer">
+                    <h2>Jeff</h2>
+                </div>
+            </div>
+            <div>
+                <p class="p_brista">Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista. Jeff is a barista.</p>
+            </div>
+        </div>
+    </div>
+</div>

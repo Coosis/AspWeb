@@ -1,0 +1,32 @@
+﻿@page "/login"
+@model AspWeb.Pages.LoginModel;
+@{
+    ViewData["Title"] = "Login";
+}
+
+@if (TempData["message"]!=null)
+{
+    <div class="alert alert-success">
+        @TempData["message"]
+    </div>
+}
+
+@if (TempData["register_success"] != null)
+{
+    @if ((bool)TempData["register_success"] == true)
+    {
+        <div class="alert alert-success">
+            @TempData["register_info"]
+        </div>
+    }
+}
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form method="post">
+        <input asp-for="username" type="text" id="username" placeholder="Username" autocomplete="username"><br>
+        <input asp-for="password" type="password" id="password" placeholder="Password" autocomplete="current-password"><br>
+        <button type="submit" style="margin-bottom: 10px;">Login</button>
+        <a asp-page="/Register">Doesn't have an account? Register now</a>
+    </form>
+</div>

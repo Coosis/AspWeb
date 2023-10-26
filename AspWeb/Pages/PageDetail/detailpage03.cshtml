@@ -1,0 +1,98 @@
+﻿@page "/detailpage03"
+@using AspWeb.Pages.PageDetail;
+@model AspWeb.Pages.PageDetail.detailpage03Model
+@{
+}
+
+@if (TempData["message"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["message"]
+	</div>
+}
+
+<div class="detail_background_div">
+	<img src="assets/RedPhotos/Page2/hongimg05.jpeg" class="detail_background">
+</div>
+<div class="detail_page_div">
+	<div class="detailpage_header_div">
+
+		<div class="detailpage_title_div">
+			<h1>远离生活的建筑没有生命力</h1>
+		</div>
+		@if (!DetailPage01Val.signed)
+		{
+			<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+				<div>
+					<button class="star_button"></button>
+				</div>
+			</form>
+		}
+		else
+		{
+			if (@DetailPage01Val.fav)
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button_yellow"></button>
+					</div>
+				</form>
+			}
+			else
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button"></button>
+					</div>
+				</form>
+			}
+		}
+	</div>
+
+	<div class="ImageTextBlockDiv_TextDiv">
+		<p>
+			建筑是城市发展的重要载体，不同时代的建筑寄托着人们的乡愁，延续着城市的文脉。2016年至今，在中国文物学会、中国建筑学会的学术指导下，20世纪建筑遗产委员会向社会公布了八批共计798个遗产项目，日前在上海世博滨江大厦进行的“新中国20世纪建筑遗产活化利用暨上海现当代优秀建筑传承创新研讨会”上，诸多院士和建筑师到场，就新中国20世纪建筑遗产活化利用深入探讨。
+
+			近年来，中国文物学会会长、故宫博物院学术委员会主任单霁翔“穿着布鞋”走遍故宫，又“穿着布鞋”奔走在保护文化遗产的路上。在接受本报独家专访时，单霁翔说：“20世纪是人类社会前所未有高速发展的一个时代，它留下建筑遗存比过去几千年存量的总和还要多。认真阅读优秀的中国20世纪建筑，思考它们与当时社会、经济、文化乃至工程技术之间的互动关系，从中吸取丰富的营养，将成为当代和未来世代理性思考的智慧源泉。”
+		</p>
+	</div>
+
+	<div class="ImageTextBlockDiv_TextDiv">
+		<p>
+			记：研究保护20世纪建筑遗产对当下和未来有什么意义？
+
+			单：城市化发展进入加速进程，不断更新的建筑留下了自己的印记。一个城市历史的叠加越丰富，人们越能够感受到城市景观丰富的内涵。20世纪给了我们丰富的建筑遗存，但并不是所有的建筑都要保护，哪些应该被保护，哪些应该得到重点保护，应该看是否能融入未来的生活，这项工作需要智慧。
+
+			这方面，上海给了我很大触动。黄浦江两岸不同的景致扑面而来不同的城市气息，真正实现了保护老城建设新城，两者才能相映成辉。上海从上个世纪开始公布优秀历史建筑，是历史建筑保护的先驱，今天，外滩的历史建筑功能都在转换，过去的银行成为了博物馆、美术馆。工业建筑遗产保护方面上海也是先驱，杨树浦水厂至今还在运行，整体成为一个文旅项目。江南造船厂原来计划保护13栋建筑，经过呼吁“整体保护江南造船厂的历史进程”，上海市专门派员到国家文物局沟通，做出了保护70%老建筑的决定。
+		</p>
+	</div>
+
+	<div class="ImageTextBlockDiv_TextDiv">
+		<p>
+			记：20世纪建筑遗产和历史建筑在当下的活化运用有哪些区别？
+
+			单：历史建筑往往采取砖石结构或木结构，相对而言性质比较稳定，而20世纪建筑最初的钢筋混凝土不太稳定，生产工艺也没有经过时间的检验，钢铁新型材料会有腐蚀锈蚀，表面脱落。20世纪建筑在用途上更广泛，跨度大承重强，所以对于20世纪建筑遗产的保护并不简单，在保护景观外部特点和核心历史元素的同时，要适应人们的现实生活、发展的需要，进行合理运用。刚开始关注工业建筑遗存时，人们只不过觉得房价比宾馆饭店便宜，适合年轻人入驻，后来觉得保留下来的生产线非常有味道，适合创作，越来越多人喜欢，才逐渐形成气候，比如北京的798。
+		</p>
+	</div>
+
+	<div class="ImageTextBlockDiv_TextDiv">
+		<p>
+			记：工业遗存除了创意园区之外，还有什么在当下的活化途径？
+
+			单：工业建筑遗产活化的成功案例以创意空间、设计园地为多，这要根据每个城市市民需求、地区发展前景进行规划思考，不能抄袭模仿别人。但无论活化成什么设施，如果远离人们的生活，那就没有生命力。能拥抱人们的生活，拥抱年轻人的需求，拥抱今天科学技术的发展，拥抱未来，20世纪建筑遗产才能够得到更合理长久的保护和应用。
+		</p>
+	</div>
+
+	<div class="ImageTextBlockDiv_TextDiv">
+		<p>
+			记：您近年来在文化类的综艺上非常活跃，您的初衷是什么？
+
+			单：我不是演员，不会背台词，不会装，做报告讲的都是自己的工作体会，自己的故事。我们越来越认识到文化遗产保护要得到公众的认同，要和公众的认知、现实生活中产生的体会相联系。我通过行走交流参与和人们沟通，让大家爱上文化遗产走进文化遗产，甚至参与到文化遗产保护的行动中来。
+
+			文化遗产是有生命的，这个生命充满了故事，而20世纪建筑遗产更是承载着鲜活的故事，随着时间的流逝，故事成为历史，历史变为文化，长久地留存在人们的心中。
+		</p>
+	</div>
+
+	<footer class="DeatailPageFooter">时间：2023-10-14  记者：未知  作者：未知  来源：人民日报  点击: 209 次</footer>
+</div>
+</div>

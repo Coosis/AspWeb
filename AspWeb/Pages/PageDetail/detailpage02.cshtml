@@ -1,0 +1,114 @@
+﻿@page "/detailpage02"
+@using AspWeb.Pages.PageDetail;
+@model AspWeb.Pages.PageDetail.detailpage02Model
+@{
+}
+
+@if (TempData["message"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["message"]
+	</div>
+}
+
+<div class="detail_background_div">
+	<img src="assets/RedPhotos/Page2/hongimg05.jpeg" class="detail_background">
+</div>
+<div class="detail_page_div">
+	<div class="detailpage_header_div">
+
+		<div class="detailpage_title_div">
+			<h1>传承千年窑火 振兴美丽乡村</h1>
+		</div>
+		@if (!DetailPage02Val.signed)
+		{
+			<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+				<div>
+					<button class="star_button"></button>
+				</div>
+			</form>
+		}
+		else
+		{
+			if (@DetailPage02Val.fav)
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button_yellow"></button>
+					</div>
+				</form>
+			}
+			else
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button"></button>
+					</div>
+				</form>
+			}
+		}
+	</div>
+
+	<div class="ImageBlockDiv">
+		<img class="ImageBoxStretch" src="assets/RedPhotos/Page2/hongimg06.jpeg">
+	</div>
+	<div class="TextBlockDiv">
+		<p>
+			10月11日，是习近平总书记赴江西考察的第二天，他先后来到景德镇、上饶调研。
+			景德镇，从唐代开始制瓷，千年窑火，生生不息，无数精美瓷器，从这里走向全国，走向世界，成为中华文明标识之一。
+		</p>
+	</div>
+
+	<div class="ImageTextBlockDiv">
+		<div class="ImageTextBlockDiv_ImageDiv">
+			<img class="ImageBoxStretch" src="assets/RedPhotos/Page1/hongimg07.jpeg">
+		</div>
+		<div class="ImageTextBlockDiv_TextDiv">
+			<p>
+				“我一看到总书记亲切的笑容，心里一下就放松了。”景德镇国家陶瓷文化传承创新试验区管委会专职副主任刘子力，回忆起和总书记见面的场景时说道。
+
+				刘子力陪同记者，沿着总书记考察的足迹，一路走一路介绍：“总书记首先考察了具有654年历史的明清御窑厂遗址，‍‍之后进入到御窑厂博物馆，‍从博物馆出来以后，总书记‍‍参观了非遗里弄，仔细察看了景德镇的4大名瓷，他边走边问，还和游客、商铺店主们亲切交谈。”
+
+				“总书记问我，有没有‍‍国际陶艺家在这里驻场，来了多少？”刘子力说，“我告诉总书记，有56个国家的3100多名‍‍国际陶艺家来景德镇驻场创作。总书记听后非常高兴。”
+
+				‍ “我们保护了历经沧桑留存下来的‍‍文化遗产，现在我们还要更好地保护这个文化空间里面的手工技艺。‍”刘子力说，“接下来，我们要牢记习近平总书记的嘱托，坚持把陶瓷文化传承创新这件事情干好，‍‍努力把年轻人引导和吸引到景德镇，活化我们传承下来的老手艺、老文化，让传统文化融入到老百姓的生活当中。同时，我们还要把‍‍景德镇文化与世界分享。”
+
+				在具有200年历史的明清窑作群里，习近平总书记饶有兴致地步入制瓷长廊，并和现场的艺术家们进行了交流。
+
+				在国家级非物质文化遗产粉彩代表性传承人傅长敏创作的《丝路情缘系列》作品前，‍‍总书记驻足停留，傅长敏随即向总书记介绍起了自己的粉彩工艺。“我告诉总书记，粉彩是一种比较复杂的工艺形式，后面还有几道工序要完成，‍‍总书记听得非常专注，并不时询问工艺细节。”傅长敏说，在今后的艺术创作中，自己一定会‍把总书记对自己的嘱托，转化成文化传承的实践动力，把自己的手艺毫无保留地传授给年轻人，实现代代相传。
+
+				“没有想到能在景德镇见到习近平总书记，很意外、很开心。”魏荣荣，一位来自甘肃的95后青年艺术家，目前正在景德镇研究如何将陶瓷绘画和敦煌壁画结合起来。“今天能在这里聆听到总书记的鼓励，我们都很振奋。总书记的话，让我觉得自己确定的路是对的，今后会一步一步坚定地走下去，让更多的中华优秀传统文化，像敦煌壁画一样，通过陶瓷实现活态传承。”
+
+				11日下午，习近平总书记抵达上饶市婺源县。在这里，总书记考察了秋口镇王村石门自然村。
+			</p>
+		</div>
+	</div>
+
+	<div class="TextImageBlockDiv">
+		<div class="ImageTextBlockDiv_TextDiv">
+			<p>
+				深秋时节，石门自然村的茶园依旧碧绿，清澈的河水从灰瓦白墙的徽派民居旁流过，晒秋的辣椒、豆谷等散落在晒场上，成为一抹靓丽的色彩。因为山好水好，这里还成为极度濒危鸟类—蓝冠噪鹛的栖息地之一。
+
+				在村里的晒秋广场，总书记与前来写生的大学生们亲切交谈；
+
+				在村里的酒坊里，总书记向店主详细了解了米酒的酿造过程；
+
+				在村民家门口，总书记向村民了解马家柚这一上饶地方特色水果。
+
+				“总书记刚进酒坊时，我激动得不知道说什么好了，但当总书记亲切地问我‘您是在酿米酒？’，我的心一下子就平静了下来。我觉得总书记就像是我们很熟悉的一个长辈在跟我聊天。”石门村查记酒坊店主查永红激动地说，“总书记详细询问查氏米酒的制作过程，我给他介绍了每一道工序。”
+
+				“我告诉总书记，我是市级非物质文化遗产保护项目——查记酒坊第十一代传承人，我能感觉得到，习近平总书记非常关注非物质文化遗产。我今后一定把这门手艺更好地传承下去，用传统的好米酒去服务现代生活，要把它做成产业，去带动乡亲们致富，利用这传统文化去发展我们石门村的经济，振兴我们自己的家园。”查永红说。
+
+				“总书记告诉我们要保护好老房子，保护好生态环境、做好旅游，让村民富裕起来。作为村干部，我们要把总书记的嘱托牢牢地刻在脑海里，落在行动上。”王村村支书俞志金说。
+
+				走在村道上，婺源县委书记徐树斌仍旧难掩激动，“总书记非常关心乡村振兴，我告诉总书记，我们的有机茶远销海内外，尤其是欧盟市场占领了可观的份额。总书记叮嘱我们要围绕婺源独有的特色资源，抓好特色产业，让老百姓过上幸福的生活，让每个人的日子蒸蒸日上。”徐树斌说，“今后的工作中，我们一定谨记总书记嘱托，抓牢旅游和茶业两大支柱产业，惠及更多百姓。”
+			</p>
+		</div>
+		<div class="ImageTextBlockDiv_ImageDiv">
+			<img class="ImageBoxStretch" src="assets/RedPhotos/Page1/hongimg07.jpeg"></img>
+		</div>
+	</div>
+
+
+	<footer class="DeatailPageFooter">时间：2023-10-14  记者：未知  作者：未知  来源：人民日报  点击: 209 次</footer>
+</div>

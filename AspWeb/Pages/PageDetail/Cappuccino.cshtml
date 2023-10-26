@@ -1,0 +1,77 @@
+﻿@page "/cappuccino"
+@using AspWeb.Pages.PageDetail;
+@model AspWeb.Pages.PageDetail.CappuccinoModel
+@{
+}
+
+@if (TempData["message"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["message"]
+	</div>
+}
+
+<div class="detail_background_div">
+	<img src="assets/mocha.jpg" class="detail_background">
+</div>
+<div class="detail_page_div">
+	<div class="detailpage_header_div">
+	
+		<div class="detailpage_title_div">
+			<h1>Cappuccino</h1>
+		</div>
+		@if (!@CappuccinoVal.signed)
+		{
+			<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+				<div>
+					<button class="star_button"></button>
+				</div>
+			</form>
+		}
+		else
+		{
+			if (@CappuccinoVal.fav)
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button_yellow"></button>
+					</div>
+				</form>
+			}
+			else
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button"></button>
+					</div>
+				</form>
+			}
+		}
+	</div>
+
+	<div class="ImageBlockDiv">
+		<img class="ImageBoxStretch" src="assets/mocha.jpg"></img>
+	</div>
+	<div class="ImageTextBlockDiv">
+		<div class="ImageTextBlockDiv_ImageDiv">
+			<img class="ImageBoxStretch" src="assets/mocha.jpg"></img>
+		</div>
+		<div class="ImageTextBlockDiv_TextDiv">
+			<p>A Para</p>
+		</div>
+	</div>
+	<div class="TextImageBlockDiv">
+		<div class="ImageTextBlockDiv_TextDiv">
+			<p>A Para</p>
+		</div>
+		<div class="ImageTextBlockDiv_ImageDiv">
+			<img class="ImageBoxStretch" src="assets/mocha.jpg"></img>
+		</div>
+	</div>
+	<div class="TextBlockDiv">
+		<p>Hello</p>
+	</div>
+
+	<footer class="DeatailPageFooter">somethingsomething</footer>
+</div>
+
