@@ -39,10 +39,18 @@ window.addEventListener('scroll', () => {
     const movingDiv = document.querySelector('.detail_page_div');
     const distance = window.scrollY;
 
-    // Adjust the threshold value (e.g., 200) as needed for when the effect triggers
     if (distance > 5) {
         movingDiv.classList.add('detail_page_div_overlap');
     } else {
         movingDiv.classList.remove('detail_page_div_overlap');
     }
+});
+
+const parallaxImage = document.querySelector('.parallax-image');
+parallaxImage.style.height = `${document.body.scrollHeight}px`;
+parallaxImage.style.top = `${-document.body.scrollHeight}px`;
+window.addEventListener('scroll', () => {
+    // Adjust the speed factor for the parallax effect.
+    const speed = 0.4;
+    parallaxImage.style.transform = `translateY(${(window.scrollY) * speed}px)`;
 });

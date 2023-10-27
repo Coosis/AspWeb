@@ -13,7 +13,7 @@
 .h1_item_head{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
-    font-weight:bold;
+    font-weight:bolder;
 }
 
 .italic_content{
@@ -21,3 +21,4 @@
     text-decoration: dotted;
     font-style: italic;
 }
+

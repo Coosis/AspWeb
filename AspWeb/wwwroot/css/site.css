@@ -456,14 +456,21 @@ ul, ol {
   height: auto;
 }
 
-.ImageTextBlockDiv_ImageDiv{
-  flex: 0 0 33%;
+.para_detail_font {
+    font-size: larger;
+    font-weight: 500;
 }
 
-.ImageTextBlockDiv_TextDiv{
-  flex: 0 0 66%;
-  padding-left: min(5%, 10px);
-  padding-right: min(5%, 10px);
+.ImageTextBlockDiv_ImageDiv{
+  flex: 0 0 40%;
+}
+
+.ImageTextBlockDiv_TextDiv {
+    flex: 0 0 60%;
+    padding-left: min(5%, 10px);
+    padding-right: min(5%, 10px);
+    display:flex;
+    align-items:center;
 }
 
 .ImageBoxStretch{
@@ -477,4 +484,20 @@ ul, ol {
   font-style: italic;
   font-family: Arial cursive;
   color: gray;
+}
+
+.parallax-container {
+    height: 35vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-image {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-image: url('/assets/RedPhotos/giant03.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
 }
