@@ -5,21 +5,21 @@ using System.Data;
 
 namespace AspWeb.Pages.PageDetail
 {
-	public class DetailPage05Val
+	public class DetailPage08Val
 	{
 		public static bool signed;
 		public static bool fav;
 	}
-	public class detailpage05Model : PageModel
+	public class detailpage08Model : PageModel
     {
-		public string _pagename = "大力弘扬传统文化 寻根问祖凝聚力量";
-		public string _pagelink = "/PageDetail/detailpage05";
+		public string _pagename = "于吉红：努力走在科技最前沿";
+		public string _pagelink = "/PageDetail/detailpage08";
 
 		private string connectionString = "Server=localhost;User ID=root;Password=Root12345@;Database=user_info";
 		public void OnGet()
 		{
-			DetailPage05Val.signed = User.Identity.IsAuthenticated;
-			if (DetailPage05Val.signed)
+			DetailPage08Val.signed = User.Identity.IsAuthenticated;
+			if (DetailPage08Val.signed)
 			{
 				try
 				{
@@ -39,7 +39,7 @@ namespace AspWeb.Pages.PageDetail
 
 							if ((string)row["page_name"] == _pagename || (string)row["page_link"] == _pagelink)
 							{
-								DetailPage05Val.fav = true;
+								DetailPage08Val.fav = true;
 								break;
 							}
 						}
@@ -58,7 +58,7 @@ namespace AspWeb.Pages.PageDetail
 			if (!User.Identity.IsAuthenticated)
 				return RedirectToPage("/login");
 
-			if (DetailPage05Val.fav)
+			if (DetailPage08Val.fav)
 			{
 				try
 				{
@@ -71,7 +71,7 @@ namespace AspWeb.Pages.PageDetail
 					command.ExecuteNonQuery();
 					connection.Close();
 
-					DetailPage05Val.fav = false;
+					DetailPage08Val.fav = false;
 					return RedirectToPage(_pagelink);
 				}
 				catch (Exception ex)
@@ -93,7 +93,7 @@ namespace AspWeb.Pages.PageDetail
 					command.ExecuteNonQuery();
 					connection.Close();
 
-					DetailPage05Val.fav = true;
+					DetailPage08Val.fav = true;
 				}
 				catch (Exception ex)
 				{

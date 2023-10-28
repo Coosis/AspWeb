@@ -1,0 +1,85 @@
+﻿@page "/detailpage07"
+@using AspWeb.Pages.PageDetail;
+@model AspWeb.Pages.PageDetail.detailpage07Model
+@{
+}
+
+@if (TempData["message"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["message"]
+	</div>
+}
+
+<div class="detail_background_div">
+	<img src="assets/RedPhotos/Page7/peoimg05.jpg" class="detail_background">
+</div>
+<div class="detail_page_div">
+	<div class="detailpage_header_div">
+
+		<div class="detailpage_title_div">
+			<h1>徐梦桃：为梦想坚持 拼出冬奥冠军</h1>
+		</div>
+		@if (!DetailPage07Val.signed)
+		{
+			<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+				<div>
+					<button class="star_button"></button>
+				</div>
+			</form>
+		}
+		else
+		{
+			if (@DetailPage07Val.fav)
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button_yellow"></button>
+					</div>
+				</form>
+			}
+			else
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button"></button>
+					</div>
+				</form>
+			}
+		}
+	</div>
+
+	<div class="TextBlockDiv">
+		<p class="para_detail_font">
+			在众多雪上项目中，自由式滑雪空中技巧是中国队率先取得冬奥奖牌突破的领域。然而，从1998年的长野到2018年的平昌，20年，中国队始终未能“捅破”女子金牌那层“窗户纸”。
+
+			北京冬奥会前，徐梦桃已经有了三届冬奥会经历。温哥华，初出茅庐的她名列第六；索契，落地时稍有失误，抱憾摘银；平昌，世界排名第一的她在大风中挑战三周跳失利……
+
+			时间来到了2022年，北京冬奥会。年过30的徐梦桃第四次站上冬奥会女子决赛的出发台，在她之前出发的国外选手刚刚刷新了场上最高分——令人窒息的压力再度袭来。
+
+			无悔追梦，放手一搏！徐梦桃果断选择将最后一跳难度拉满。那一天，又是大风、低温，但她最终完美落地，不负期望，为中国女子自由式滑雪空中技巧实现了冬奥金牌“零”的突破！
+
+			夺冠后，徐梦桃身披国旗、泪流满面，在风雪中豪迈呐喊——镌刻下感动无数人的北京冬奥会名场面。
+
+			回忆自己夺冠一跳，徐梦桃说：“那时我的心跳并没有加快，只是完全沉浸到比赛中了，其实这就是因为我‘练到了’。”
+
+			一句朴素的“练到了”，背后是超乎常人的付出。为了走出平昌失利的阴霾，也因为预期到在北京冬奥会张家口赛区同样可能面临着高风速、低温，徐梦桃在备战中就专门逼自己去挑战这种对动作发挥最不利的环境。
+
+			“冬奥会前在芬兰参加训练和比赛，因为风大，着陆坡上冰状雪又特别多，别的选手虽然都报了三周跳动作，但实际上又纷纷改做了两周跳。但是我一定要跳三周，训练时真是快摔死了，有时候好几天脖子都不能动，整个半月板特别疼。”
+
+			反复承受躯体冲击，反复经历跌倒又爬起，这虽是竞技体育残酷的定式，但对徐梦桃而言，则意味着更多艰辛——在进入北京冬奥会备战前，她的双膝已经历过四次大手术，其中左膝70%的外侧半月板被切除，交叉韧带两度断裂，至今仍有不少手术钢钉留在体内！
+
+			按照空中技巧领域一个广为流传的说法，当高水平选手退役时，多多少少都会有伤病缠身。在漫长的四个奥运周期中，徐梦桃身边的不少队友和对手已告别跳台，但她仍在坚持，甚至以高于其他运动员的标准要求自己——这本身就是用超群毅力创造的奇迹。
+
+			徐梦桃回忆，由于陈年的膝伤，在平昌冬奥会后她也一度有过退役的念头，但最终还是选择继续拼搏，是因为仍放不下未竟的冠军梦想，想要在本土举办的冬奥会上为国争光。
+
+			“我认为作为一个运动员，如果能给社会带来一些励志和鼓舞的话，一定是靠行动力。你看我们日复一日训练，真的是掺不了假。这其中的汗水、泪水，大家都看在眼里，无论最终取得好成绩与否，大家都是见证的。”
+
+			对于自己能够当选党的二十大代表，徐梦桃倍感光荣和责任重大。
+
+			“在赛场上，我不是一个人在战斗，背后是整个中国体育，其中有非常多优秀的党员，他们给了我很大支持。”徐梦桃说，“成为党的二十大代表后，我希望把我们整个体育系统党员们的精气神，尤其是运动员党员在备战中起到的榜样作用传承下去，我也希望用我们追求梦想、力拼冠军的劲头，带动身边所有的人。”
+		</p>
+	</div>
+
+	<footer class="DeatailPageFooter">发布时间：2022年10月12日 14:41 来源：共产党员网 编辑：许建文</footer>
+</div>

@@ -1,0 +1,75 @@
+﻿@page "/detailpage08"
+@using AspWeb.Pages.PageDetail;
+@model AspWeb.Pages.PageDetail.detailpage08Model
+@{
+}
+
+@if (TempData["message"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["message"]
+	</div>
+}
+
+<div class="detail_background_div">
+	<img src="assets/RedPhotos/Page8/peoimg06.jpg" class="detail_background">
+</div>
+<div class="detail_page_div">
+	<div class="detailpage_header_div">
+
+		<div class="detailpage_title_div">
+			<h1>于吉红：努力走在科技最前沿</h1>
+		</div>
+		@if (!DetailPage08Val.signed)
+		{
+			<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+				<div>
+					<button class="star_button"></button>
+				</div>
+			</form>
+		}
+		else
+		{
+			if (@DetailPage08Val.fav)
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button_yellow"></button>
+					</div>
+				</form>
+			}
+			else
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button"></button>
+					</div>
+				</form>
+			}
+		}
+	</div>
+
+	<div class="TextBlockDiv">
+		<p class="para_detail_font">
+			利落的短发、得体的套装，交谈时柔和淡定，眼前的于吉红给人干练的印象。为学生指导实验、修改论文、授课，和团队成员讨论项目进展，主持和参加学术会议，作为国际学术期刊的编辑处理稿件……对于中国科学院院士、吉林大学化学学院教授于吉红而言，每天从早到晚忙碌工作，是一种常态。
+		
+			“我一直从事分子筛纳米孔材料的研究。分子筛是用来筛分不同分子的材料，被广泛应用于工业催化、吸附分离和离子交换等领域。”于吉红说。30余年来，她潜心研究，不断创新，在分子筛材料的创制及其基础应用研究中取得一系列突破性成果，产生重要国际学术影响，推动了我国分子筛科学研究的进步和发展。
+
+			在科研这条道路上，从不会一帆风顺，于吉红也经历过许多艰辛。20世纪90年代，随着各类新生材料崛起，分子筛这个传统研究领域一度处于瓶颈低谷期。于吉红坚定选择了功能材料的分子工程学这一极具挑战性的研究方向，致力于分子筛材料的定向合成。不少人都劝她改换热点方向，否则很难出成果，但于吉红一直坚守。
+
+			为了实现分子筛的定向合成，她带领团队下苦功夫，通过查阅海量文献在国际上率先创建了分子筛合成数据库。在此基础上，她在国际上较早地提出以理论模拟、数据挖掘和高通量实验相结合指导分子筛定向合成的策略，实现了我国在分子筛新拓扑结构类型创制方面零的突破。2016年，她带领团队又在国际上首次发现羟基自由基加速分子筛成核的晶化机制，为分子筛材料的高效及绿色合成开辟新路径。
+
+			尽管已经取得很多成就，于吉红没有停下继续求索的脚步。她身体力行地告诉学生们，不能为追逐热点而跟风，只要自己有强壮的根基，并通过不断的学科交叉，就能催生出新的原创性成果。“我们尝试通过跨学科交叉研究，突破对分子筛材料的原有认知，将分子筛的应用极大地拓展到储能、光电、传感等领域。”吉林大学化学学院博士后王天双说。
+
+			“这是我们研发的全新柔性固态锂空气电池，只有0.33毫米厚，可以随意弯折，在柔性电子产品中具有重要应用前景。”于吉红手拿一张“纸片”，向记者展示。2021年，她带领团队首次开发出一种基于分子筛薄膜的全新固态电解质材料，该成果发表在《自然》期刊上，有力推动我国在固态金属空气电池领域的进步。
+
+			勤奋是形容于吉红的又一个关键词。今年除夕她都在实验室，边吃盒饭边与大家讨论国家自然科学基金分子筛基础科学中心的筹建事项。可无论多忙，学生的事都被她放在最重要的位置。她每天都和学生讨论工作，开启大家的创新思路。学生们说，老师在电脑前逐字逐句讨论修改论文的身影，让他们难忘……迄今，于吉红已培养博士70余人，40余人晋升为教授或副教授，涌现出一批青年拔尖人才。
+
+			中国科学院院士、发展中国家科学院院士，国际纯粹与应用化学联合会化学化工杰出女性奖、“全国五一劳动奖章”……于吉红获得了很多荣誉，她常说的一句话是：“我是普通教师、科技工作者，一名共产党员。”
+
+			继当选十九大代表之后，今年于吉红又光荣当选二十大代表。“我会进一步增强责任感和使命感，坚持‘四个面向’，积极投身科技创新，为我国建设世界科技强国作出新的更大的贡献。”于吉红说。
+		</p>
+	</div>
+
+	<footer class="DeatailPageFooter">发布时间：2022年09月29日 21:13 来源：共产党员网 编辑：徐瑶</footer>
+</div>

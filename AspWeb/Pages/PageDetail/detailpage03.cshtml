@@ -20,7 +20,7 @@
 		<div class="detailpage_title_div">
 			<h1>远离生活的建筑没有生命力</h1>
 		</div>
-		@if (!DetailPage01Val.signed)
+		@if (!DetailPage03Val.signed)
 		{
 			<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
 				<div>
@@ -30,7 +30,7 @@
 		}
 		else
 		{
-			if (@DetailPage01Val.fav)
+			if (@DetailPage03Val.fav)
 			{
 				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
 					<div>

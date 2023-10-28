@@ -1,6 +1,215 @@
-﻿@page
+﻿@page "/explore"
 @model AspWeb.Pages.ExploreModel
 @{
     ViewData["Title"] = "Explore";
 }
 
+<div class="filters">
+    <label style="font-size:20px; margin-right: 10px;">
+        <input type="checkbox" id="eventfilter" class="filter-checkbox" checked>
+        红色文化
+    </label>
+    <label style ="font-size:20px;">
+        <input type="checkbox" id="peoplefilter" class="filter-checkbox" checked>
+        模范代表
+    </label>
+</div>
+
+<div class="item eventfilter">
+    <div style="position:absolute; width:100%; height:100%; top:0;">
+        <a asp-page="/PageDetail/detailpage01" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page1/hongimg04.jpeg" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>弘扬爱国精神 致敬红色经典</h1>
+        </div>
+        <div>
+            <p>
+                10月13日上午，由福建省江西省、陕西省、重庆市、内蒙古自治区党委宣传部联合摄制的电影《少年先锋》在厦门首映，中国红刊传媒（澳门）红刊杂志创办人黄光宇在仪式上发布了澳门展映活动安排。
+                预计在澳门庆祝回归二十四周年前夕,《红刊》携手《少年先锋》主创团队一起，通过形式多样的展映环节，在澳门掀起致敬红色经典的光影体验。并通过展映将进一步加强澳门青少年对祖国红色故事的
+                深入了解，感怀党领导下少年儿童运动百年历史和少年英雄事迹，弘扬爱国主义精神，让澳门青少年更好融入国家发展大局。 影片拍摄制作历时五年，4000多名学生和群演参与，是近年来规模最大、
+                参演人数最多的一部少儿故事片。
+            </p>
+        </div>
+    </div>
+</div>
+<div class="item peoplefilter">
+    <div style="position:absolute; width:100%; height:100%; top:0;">
+        <a asp-page="/PageDetail/detailpage07" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page7/peoimg01.jpg" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>徐梦桃：为梦想坚持 拼出冬奥冠军</h1>
+        </div>
+        <div>
+            <p>
+                在众多雪上项目中，自由式滑雪空中技巧是中国队率先取得冬奥奖牌突破的领域。然而，从1998年的长野到2018年的平昌，20年，中国队始终未能“捅破”女子金牌那层“窗户纸”。 北京冬奥会前，徐梦桃已经有了三届冬奥会经历。温哥华，初出茅庐的她名列第六；索契，落地时稍有失误，抱憾摘银；平昌，世界排名第一的她在大风中挑战三周跳失利…… 时间来到了2022年，北京冬奥会。年过30的徐梦桃第四次站上冬奥会女子决赛的出发台，在她之前出发的国外选手刚刚刷新了场上最高分——令人窒息的压力再度袭来。 无悔追梦，放手一搏！
+            </p>
+        </div>
+    </div>
+</div>
+<div class="item eventfilter">
+    <div style="position:absolute; width:100%; height:100%; top:0;">
+        <a asp-page="/PageDetail/detailpage02" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page2/hongimg05.jpeg" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>传承千年窑火 振兴美丽乡村</h1>
+        </div>
+        <div>
+            <p>
+                10月11日，是习近平总书记赴江西考察的第二天，他先后来到景德镇、上饶调研。 景德镇，从唐代开始制瓷，千年窑火，生生不息，无数精美瓷器，从这里走向全国，走向世界，成为中华文明标识之一。
+                “我一看到总书记亲切的笑容，心里一下就放松了。”景德镇国家陶瓷文化传承创新试验区管委会专职副主任刘子力，回忆起和总书记见面的场景时说道。 刘子力陪同记者，沿着总书记考察的足迹，
+                一路走一路介绍：“总书记首先考察了具有654年历史的明清御窑厂遗址，‍‍之后进入到御窑厂博物馆，‍从博物馆出来以后，总书记‍‍参观了非遗里弄，仔细察看了景德镇的4大名瓷，他边走边问，还和游客、商铺店主们亲切交谈。”
+            </p>
+        </div>
+    </div>
+</div>
+<div class="item eventfilter">
+    <div style="position:absolute; width:100%; height:100%; top:0;">
+        <a asp-page="/PageDetail/detailpage03" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page2/hongimg06.jpeg" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>远离生活的建筑没有生命力</h1>
+        </div>
+        <div>
+            <p>
+                建筑是城市发展的重要载体，不同时代的建筑寄托着人们的乡愁，延续着城市的文脉。2016年至今，在中国文物学会、中国建筑学会的学术指导下，20世纪建筑遗产委员会向社会公布了八批共计798个遗产项目，日前在上海世博滨江大厦进行的“新中国20世纪建筑遗产活化利用暨上海现当代优秀建筑传承创新研讨会”上，诸多院士和建筑师到场，就新中国20世纪建筑遗产活化利用深入探讨。 近年来，中国文物学会会长、故宫博物院学术委员会主任单霁翔“穿着布鞋”走遍故宫，又“穿着布鞋”奔走在保护文化遗产的路上。
+            </p>
+        </div>
+    </div>
+</div>
+<div class="item peoplefilter">
+    <div style="position:absolute; width:100%; height:100%; top:0;">
+        <a asp-page="/PageDetail/detailpage08" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page8/peoimg02.jpg" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>于吉红：努力走在科技最前沿</h1>
+        </div>
+        <div>
+            <p>
+                利落的短发、得体的套装，交谈时柔和淡定，眼前的于吉红给人干练的印象。为学生指导实验、修改论文、授课，和团队成员讨论项目进展，主持和参加学术会议，作为国际学术期刊的编辑处理稿件……对于中国科学院院士、吉林大学化学学院教授于吉红而言，每天从早到晚忙碌工作，是一种常态。 “我一直从事分子筛纳米孔材料的研究。分子筛是用来筛分不同分子的材料，被广泛应用于工业催化、吸附分离和离子交换等领域。”于吉红说。
+            </p>
+        </div>
+    </div>
+</div>
+<div class="item eventfilter">
+    <div style="position:absolute; width:100%; height:100%; top:0;">
+        <a asp-page="/PageDetail/detailpage04" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page4/hongimg08.jpg" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>一起行走，看乡土新风</h1>
+        </div>
+        <div>
+            <p>
+                三访垌头村 王汉超
+                近十年，我三次到访垌头。三幕跌宕起伏，连缀起一个村庄的奋斗史。 第一次在2014年底，大约冬至前。村民请来远近的老人看演出，听合唱，吃饺子宴，寒冬腊月热气腾腾。台上的老少，更像下肚半斤烧酒，唱得手舞足蹈。那时，这样热闹的合唱，村里已经搞了六年。 河南省登封市大冶镇垌头村，既不靠山又不傍水，既少资源，又缺区位，村民既不能歌，更不善舞，属于河南中部再普通不过的农村。
+            </p>
+        </div>
+    </div>
+</div>
+<div class="item peoplefilter">
+    <div style="position:absolute; width:100%; height:100%; top:0;">
+        <a asp-page="/PageDetail/detailpage09" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page9/proimg03.jpg" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>王海旭：忠诚拼搏 锻造过硬实力</h1>
+        </div>
+        <div>
+            <p>
+                子夜，一场多军兵种检验性对抗演练拉开帷幕。驻香港部队某部分队装备车辆集结编队，迅速抢占阵地、做好战斗准备。听着作战参谋的报告，分队长王海旭紧盯着雷达显示器，等待最佳时机。“3发导弹，连续抗击！”王海旭一声令下，导弹划破夜空，精准击中目标！ “作为防空兵，我们要时刻保持忠诚使命的拼搏姿态，提高在各种环境下的实战能力！”演练结束，王海旭坚定地说。
+            </p>
+        </div>
+    </div>
+</div>
+<div class="item eventfilter">
+    <div style="position:absolute; width:100%; height:100%; top:0; z-index=1;">
+        <a asp-page="/PageDetail/detailpage05" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page5/hongimg09.png" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>大力弘扬传统文化 寻根问祖凝聚力量</h1>
+        </div>
+        <div>
+            <p>
+                癸卯兔年的十月非同往年，这是肆虐了三年的疫情结束之后我们迎来的第一个自由欢快的国庆佳节。举目望去，秋日的北京，天高云淡、红旗招展、鲜花飘香。人们怀着喜悦、幸福的心情庆贺新中国成立74周年。 为此，“中国根”系列文化活动组委会和北京中侨联文化交流中心策划并主办了这场意义非凡的全国书画名家专题笔会，同时举行了隆重的迎“国庆”招待会。
+            </p>
+        </div>
+    </div>
+</div>
+<div class="item eventfilter">
+    <div style="position:absolute; width:100%; height:100%; top:0; z-index=1;">
+        <a asp-page="/PageDetail/detailpage06" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page6/hongimg13.png" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>传承红色基因 赓续红色血脉</h1>
+        </div>
+        <div>
+            <p>
+                9月23日上午，纪念毛泽东同志诞辰130周年座谈会，在北京中国毛泽东手书馆隆重举行。此次活动， 由中国毛泽东手书馆、中国发明协会、中国红色文化研究会国防文化传承委员会联合主办， 中国毛泽东手书馆馆长张朝亮主持，一百多人参加这次活动。
+
+                与会代表向毛主席座像三鞠躬，并高声合唱《东方红》。不少人在放声歌唱时眼睛都湿润了，毛主席身边工作人员的脸上，更是挂满了晶莹的泪花。然后，大家瞻仰，并参观了中国毛泽东手书馆，张朝亮馆长一一向嘉宾介绍了陈列着数百幅毛主席书法作品。
+            </p>
+        </div>
+    </div>
+</div>
+<div class="item peoplefilter">
+    <div style="position:absolute; width:100%; height:100%; top:0;">
+        <a asp-page="/PageDetail/detailpage10" class="wholelink"></a>
+    </div>
+
+    <div class="pageicondiv">
+        <img src="~/assets/RedPhotos/Page10/peoimg04.jpg" class="pageitemimg">
+    </div>
+    <div class="pagetitleandtextdiv">
+        <div>
+            <h1>张黎明：创新使工作更快乐</h1>
+        </div>
+        <div>
+            <p>
+                “一个移动充电枪覆盖6个车位，如果安装5个，就能覆盖30个车位。”在创新工作室，党的二十大代表、国家电网天津电力滨海供电公司配电抢修班班长张黎明同两名工程技术人员围坐一起热烈讨论，身旁的一叠纸上画满了设计草图。 讨论间隙，张黎明向记者介绍他最新的创意——“移动共享充电桩”。 “开展电力志愿服务时，我发现基层对充电桩的需求越来越大，便想到设置固定充电桩，再配上可移动的充电枪，尽可能满足更多老百姓绿色出行需求。”
+            </p>
+        </div>
+    </div>
+</div>

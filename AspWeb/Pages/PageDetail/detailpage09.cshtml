@@ -1,0 +1,75 @@
+﻿@page "/detailpage09"
+@using AspWeb.Pages.PageDetail;
+@model AspWeb.Pages.PageDetail.detailpage09Model
+@{
+}
+
+@if (TempData["message"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["message"]
+	</div>
+}
+
+<div class="detail_background_div">
+	<img src="assets/RedPhotos/Page9/proimg06.jpg" class="detail_background">
+</div>
+<div class="detail_page_div">
+	<div class="detailpage_header_div">
+
+		<div class="detailpage_title_div">
+			<h1>
+				王海旭：忠诚拼搏 锻造过硬实力
+			</h1>
+		</div>
+		@if (!DetailPage09Val.signed)
+		{
+			<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+				<div>
+					<button class="star_button"></button>
+				</div>
+			</form>
+		}
+		else
+		{
+			if (@DetailPage09Val.fav)
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button_yellow"></button>
+					</div>
+				</form>
+			}
+			else
+			{
+				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
+					<div>
+						<button class="star_button"></button>
+					</div>
+				</form>
+			}
+		}
+	</div>
+
+	<div class="TextBlockDiv">
+		<p class="para_detail_font">
+			子夜，一场多军兵种检验性对抗演练拉开帷幕。驻香港部队某部分队装备车辆集结编队，迅速抢占阵地、做好战斗准备。听着作战参谋的报告，分队长王海旭紧盯着雷达显示器，等待最佳时机。“3发导弹，连续抗击！”王海旭一声令下，导弹划破夜空，精准击中目标！
+
+			“作为防空兵，我们要时刻保持忠诚使命的拼搏姿态，提高在各种环境下的实战能力！”演练结束，王海旭坚定地说。
+
+			王海旭曾长期在西北、东北等地区执行防空任务，练就了过硬的专业本领。2020年初，王海旭前往驻香港部队某部工作。由于濒海环境与内陆存在较大差异，王海旭下定决心：归零从头学，整装再出发。
+
+			王海旭反复研读相关教材，学习笔记记了三大本，有疑问就反复请教。3个月下来，王海旭对分队数十种专业如数家珍，对数十台装备性能参数都“一摸准”“一口清”。
+
+			“找分队长？去阵地。”这是分队官兵们常说的话。即使在节假日，王海旭也经常铆在阵地上钻研打法。
+
+			“梯队行军抢占阵地，搜索雷达和目指雷达到底哪个当头车？”为了弄明白这个问题，王海旭组织编队演练了七八遍。“战场上快一秒，胜算就多一分。”面对官兵疑问，王海旭回答。经过反复比较，王海旭找到了最优解，部队抢占阵地的时间压缩了8分钟。
+
+			“不仅自己要有过硬本领，还要带出过硬团队。”这些年，王海旭带头攻关，创新“融入体系尽远侦、区分火力同步打、集火抗击重点防”等一批新战法，研创“夜间微光标定法”等小革新、小发明76项，3个战法被上级授予战法创新奖。
+
+			入伍以来，王海旭荣立二等功1次、三等功1次。近年来，王海旭所在分队荣立集体三等功1次。当选党的二十大代表后，王海旭使命感更加强烈：“我们将持续提升履行防务能力，以更加过硬的实力坚决完成好各项使命任务！”
+		</p>
+	</div>
+
+	<footer class="DeatailPageFooter">时间：2023-10-14  记者：日月/周成玉  作者：未知  来源：中国红色文化党建网</footer>
+</div>

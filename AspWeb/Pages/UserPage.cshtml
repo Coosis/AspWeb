@@ -5,7 +5,7 @@
 	{
 		string[] blocks = link.Split('/');
 		int len = blocks.Length;
-		string pathname = "http://http://47.97.7.2/" + blocks[len-1];
+		string pathname = "http://47.97.7.2/" + blocks[len-1];
 		return pathname;
 	}
 }
@@ -24,11 +24,11 @@
 </div>
 
 <div>
-	<ul class="star_div
+	<ul class="star_div"
 		@foreach(var p in Model.pageFaved)
 		{
 			<li>
-				<a class="star_div_content" asp-page=@p.Link>@p.Name</a>
+				<a class="star_div_content" href=@get_webpath(p.Link)>@p.Name</a>
 				<p class="star_div_content_text">@get_webpath(p.Link)</p>
 			</li>
 		}

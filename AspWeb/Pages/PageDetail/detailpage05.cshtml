@@ -20,7 +20,7 @@
 		<div class="detailpage_title_div">
 			<h1>大力弘扬传统文化 寻根问祖凝聚力量</h1>
 		</div>
-		@if (!DetailPage01Val.signed)
+		@if (!DetailPage05Val.signed)
 		{
 			<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
 				<div>
@@ -30,7 +30,7 @@
 		}
 		else
 		{
-			if (@DetailPage01Val.fav)
+			if (@DetailPage05Val.fav)
 			{
 				<form asp-page-handler="Fav" method="post" class="detailpage_star_div">
 					<div>

@@ -26,6 +26,8 @@ namespace AspWeb.Pages
 
         public IActionResult OnPost() {
             string str = "";
+            if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+                return RedirectToPage("/register");
             try
             {
                 str += "Err01";
@@ -67,8 +69,6 @@ namespace AspWeb.Pages
                     }
                     if (!match_found)
                     {
-                        
-
                         //inserting into user list
                         string add_user_query = "INSERT INTO basic_info (id, name, email, password) VALUES (@ID, @Username, @Email, @Password);";
                         MySqlCommand command2 = new MySqlCommand(add_user_query, connection);
