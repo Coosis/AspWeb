@@ -26,8 +26,11 @@ namespace AspWeb.Pages
 
         public IActionResult OnPost() {
             string str = "";
-            if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
-                return RedirectToPage("/register");
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password)) {
+                TempData["register_success"] = false;
+                TempData["register_info"] = "Please enter name, email and password.";
+                return RedirectToPage("/register"); 
+            }
             try
             {
                 str += "Err01";
